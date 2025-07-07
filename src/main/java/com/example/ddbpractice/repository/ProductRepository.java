@@ -1,7 +1,6 @@
 package com.example.ddbpractice.repository;
 
 import com.example.ddbpractice.model.Product;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import software.amazon.awssdk.enhanced.dynamodb.DynamoDbEnhancedClient;
 import software.amazon.awssdk.enhanced.dynamodb.DynamoDbTable;
@@ -19,7 +18,6 @@ public class ProductRepository {
     
     private final DynamoDbTable<Product> productTable;
     
-    @Autowired
     public ProductRepository(DynamoDbEnhancedClient enhancedClient) {
         this.productTable = enhancedClient.table("Product", TableSchema.fromBean(Product.class));
     }

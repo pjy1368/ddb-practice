@@ -2,7 +2,6 @@ package com.example.ddbpractice.service;
 
 import com.example.ddbpractice.model.Product;
 import com.example.ddbpractice.repository.ProductRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
@@ -15,7 +14,6 @@ public class ProductService {
     
     private final ProductRepository productRepository;
     
-    @Autowired
     public ProductService(ProductRepository productRepository) {
         this.productRepository = productRepository;
     }
